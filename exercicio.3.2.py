@@ -61,10 +61,23 @@ t.clear()
 def desenha_bandeira_jordania():
     desenha_retangulo(-100, 36.6, 150, 50, "black")
     desenha_retangulo(-100, -6.7, 150, 50, "white")
-    desenha_retangulo(-100, -50, 150, 50, "red")
+    desenha_retangulo(-100, -50, 150, 50, "green")
 
-def desenhar_triangulo(x, y, alt, color):
-    
+def desenhar_triangulo(x, y, tam, color):
+    t.pu()
+    t.goto(x, y)
+    t.pd()
+    t.begin_fill()
+    t.fillcolor(color)
+    t.goto(x + (tam * 0.8), y- (tam / 2))
+    t.goto(x, y - tam)
+    t.goto(x, y)
+    t.end_fill()
+
+def desenhar_triangulo_jordania():
+    desenhar_triangulo(-100, 75.1, 120, "red")
+
+
 
 
 
@@ -75,6 +88,7 @@ def desenhar_triangulo(x, y, alt, color):
 
 
 desenha_bandeira_jordania()
+desenhar_triangulo_jordania()
 
 
 
