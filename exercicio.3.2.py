@@ -7,7 +7,7 @@ t.speed(100)
 
 t.hideturtle()
 
-def desenha_retangulo(x, y, larg, alt, color):
+def desenhar_retangulo(x, y, larg, alt, color):
     t.pu()
     t.goto(x, y)
     t.pd()
@@ -21,11 +21,11 @@ def desenha_retangulo(x, y, larg, alt, color):
         t.left(90)
     t.end_fill()
 
-def desenha_bandeira_japao():
+def desenhar_bandeira_japao():
     desenha_retangulo(-100, -50, 200, 130, "white")
 
 
-def desenha_circulo(x, y, color, raio):
+def desenhar_circulo(x, y, color, raio):
     t.pu()
     t.goto(x, y)
     t.pd()
@@ -35,24 +35,24 @@ def desenha_circulo(x, y, color, raio):
     t.end_fill()
 
 
-def desenha_circulo_japão():
-    desenha_circulo(0, -25, "red", 40)
+def desenhar_circulo_japão():
+    desenhar_circulo(0, -25, "red", 40)
 
 
-desenha_bandeira_japao()
+desenhar_bandeira_japao()
 
-desenha_circulo_japão()
+desenhar_circulo_japão()
 
 sleep(2)
 t.clear()
 
 #italia
-def desenha_bandeira_italia():
-    desenha_retangulo(-200, 200, 50, 150, "green")
-    desenha_retangulo(-150, 200, 50, 150, "white")
-    desenha_retangulo(-100, 200, 50, 150, "red")
+def desenhar_bandeira_italia():
+    desenhar_retangulo(-200, 200, 50, 150, "green")
+    desenhar_retangulo(-150, 200, 50, 150, "white")
+    desenhar_retangulo(-100, 200, 50, 150, "red")
 
-desenha_bandeira_italia()
+desenhar_bandeira_italia()
 
 sleep(2)
 t.clear()
