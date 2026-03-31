@@ -1,11 +1,13 @@
 from turtle import *
-from time import sleep  
 
-t = Turtle()
+from time import sleep
+
+t=Turtle()
 
 t.speed(100)
 
 t.hideturtle()
+
 
 def desenhar_retangulo(x, y, larg, alt, color):
     t.pu()
@@ -21,40 +23,127 @@ def desenhar_retangulo(x, y, larg, alt, color):
         t.left(90)
     t.end_fill()
 
-def desenhar_bandeira_japao():
-    desenhar_retangulo(-100, -50, 200, 130, "white")
+#JAPAO
 
 
-def desenhar_circulo(x, y, color, raio):
+def circulo_vermelho_japao(x, y, tamanho, color):
     t.pu()
     t.goto(x, y)
     t.pd()
+    t.color(color)
     t.begin_fill()
-    t.fillcolor(color)
-    t.circle(raio)
+    t.circle(tamanho)
     t.end_fill()
 
+    
 
-def desenhar_circulo_japão():
-    desenhar_circulo(0, -25, "red", 40)
+def bandeira_japao():
+    desenhar_retangulo(-100, -50, 200, 130, "white")
+    circulo_vermelho_japao(0, -25, 40, "red")
 
-
-desenhar_bandeira_japao()
-
-desenhar_circulo_japão()
+bandeira_japao()  
 
 sleep(2)
 t.clear()
 
-#italia
-def desenhar_bandeira_italia():
-    desenhar_retangulo(-200, 200, 50, 150, "green")
-    desenhar_retangulo(-150, 200, 50, 150, "white")
-    desenhar_retangulo(-100, 200, 50, 150, "red")
+#ITALIA
 
-desenhar_bandeira_italia()
+def bandeira_italia():
+    desenhar_retangulo(-112, -75, 75, 150, "green")
+    desenhar_retangulo(-37, -75, 75, 150, "white")
+    desenhar_retangulo(38, -75, 75, 150, "red")
+
+bandeira_italia()
 
 sleep(2)
+t.clear()
+
+#IEMEN DO SUL
+
+def desenhar_triangulo_iemen(x, y, color):
+    t.pu()
+    t.goto(x, y)
+    t.pd()
+    t.color(color)
+    t.begin_fill()
+    t.goto(-50, 0)
+    t.goto(-150, 100)
+    t.goto(-150, -100)
+    t.end_fill()
+
+def estrela_vermelha_iemen(x, y, larg, alt, color):
+    t.pu()
+    t.goto(x, y)
+    t.pd()
+    t.color(color)
+    t.right(larg)
+    t.begin_fill()
+
+    for _ in range(5):
+        t.fd(alt)
+        t.right(144)
+    
+    t.end_fill()
+
+
+def bandeira_iemen():
+    desenhar_retangulo(-150, 33, 300, 67, "red")
+    desenhar_retangulo(-150, -34, 300, 67, "white")
+    desenhar_retangulo(-150, -100, 300, 67, "black")
+    desenhar_triangulo_iemen(-150, -100, "skyblue")
+    estrela_vermelha_iemen(-125, 20, 20, 45, "red")
+    
+bandeira_iemen()
+
+sleep(2)
+t.clear()
+
+# SUDAO
+
+t.left(20)
+
+def bandeira_sudao():
+    desenhar_retangulo(-150, 33, 300, 67, "red")
+    desenhar_retangulo(-150, -34, 300, 67, "white")
+    desenhar_retangulo(-150, -100, 300, 67, "black")
+    desenhar_triangulo_iemen(-150, -100, "green")
+
+bandeira_sudao()
+
+sleep(2)
+t.clear()
+
+#CHILE
+
+def bandeira_chile():
+    desenhar_retangulo(-100, -50, 200, 65, "red")
+    desenhar_retangulo(0, 15, 100, 65, "white")
+    desenhar_retangulo(-100, 15, 100, 65, "blue")
+    estrela_vermelha_iemen(-65, 50, 0, 30, "white")
+
+bandeira_chile()
+
+sleep(2)
+t.clear()
+
+#PANAMA
+
+def bandeira_panama():
+    t.color("navy", "white")
+    desenhar_retangulo(-100, 15, 100, 65, "white")
+    estrela_vermelha_iemen(-65, 50, 0, 30, "navy")
+    t.color("red", "red")
+    desenhar_retangulo(0, 15, 100, 65, "red")
+    t.color("navy", "navy")
+    desenhar_retangulo(-100, -50, 100, 65, "navy")
+    t.color("navy", "white")
+    desenhar_retangulo(0, -50, 100, 65, "white")
+    estrela_vermelha_iemen(35, -12, 0, 30, "red")
+
+bandeira_panama()
+
+sleep(2)
+
 t.clear()
 
 #JORDANIA
@@ -101,59 +190,6 @@ bandeira_jordania()
 sleep(2)
 t.clear()
 
-
-#CHILE
-
-def estrela_vermelha_iemen(x, y, larg, alt, color):
-    t.pu()
-    t.goto(x, y)
-    t.pd()
-    t.color(color)
-    t.right(larg)
-    t.begin_fill()
-
-    for _ in range(5):
-        t.fd(alt)
-        t.right(144)
-    
-    t.end_fill()
-
-def bandeira_chile():
-    desenhar_retangulo(-100, -50, 200, 65, "red")
-    desenhar_retangulo(0, 15, 100, 65, "white")
-    desenhar_retangulo(-100, 15, 100, 65, "blue")
-    estrela_vermelha_iemen(-65, 50, 0, 30, "white")
-
-bandeira_chile()
-
-sleep(2)
-t.clear()
-
-#IEMEN DO SUL
-
-def desenhar_triangulo_iemen(x, y, color):
-    t.pu()
-    t.goto(x, y)
-    t.pd()
-    t.color(color)
-    t.begin_fill()
-    t.goto(-50, 0)
-    t.goto(-150, 100)
-    t.goto(-150, -100)
-    t.end_fill()
-
-
-def bandeira_iemen():
-    desenhar_retangulo(-150, 33, 300, 67, "red")
-    desenhar_retangulo(-150, -34, 300, 67, "white")
-    desenhar_retangulo(-150, -100, 300, 67, "black")
-    desenhar_triangulo_iemen(-150, -100, "skyblue")
-    estrela_vermelha_iemen(-125, 20, 20, 45, "red")
-    
-bandeira_iemen()
-sleep(2)
-t.clear()
-
 #PAQUISTAO
 
 def desenhar_circulo_paquistao(x, y, tamanho, color):
@@ -188,57 +224,6 @@ def bandeira_paquistao():
     estrela_paquistao(35, 50, 30, 20, "white")
 
 bandeira_paquistao()
-
-sleep(2)
-t.clear()
-
-#PANAMA
-
-def bandeira_panama():
-    t.color("navy", "white")
-    desenhar_retangulo(-100, 15, 100, 65, "white")
-    estrela_vermelha_iemen(-65, 50, 0, 30, "navy")
-    t.color("red", "red")
-    desenhar_retangulo(0, 15, 100, 65, "red")
-    t.color("navy", "navy")
-    desenhar_retangulo(-100, -50, 100, 65, "navy")
-    t.color("navy", "white")
-    desenhar_retangulo(0, -50, 100, 65, "white")
-    estrela_vermelha_iemen(35, -12, 0, 30, "red")
-
-bandeira_panama()
-
-sleep(2)
-
-t.clear()
-
-# SUDAO
-
-t.left(20)
-
-def bandeira_sudao():
-    desenhar_retangulo(-150, 33, 300, 67, "red")
-    desenhar_retangulo(-150, -34, 300, 67, "white")
-    desenhar_retangulo(-150, -100, 300, 67, "black")
-    desenhar_triangulo_iemen(-150, -100, "green")
-
-bandeira_sudao()
-
-sleep(2)
-t.clear()
-
-#COREIA DO NORTE
-
-def bandeira_coreia_norte():
-    desenhar_retangulo(-150, 50, 300, 30, "navy")
-    desenhar_retangulo(-150, 40, 300, 10, "white")
-    desenhar_retangulo(-150, -40, 300, 80, "red")
-    desenhar_retangulo(-150, -50, 300, 10, "white")
-    desenhar_retangulo(-150, -80, 300, 30, "navy")
-    desenhar_circulo_paquistao(-50, -30, 30, "white")
-    estrela_generica(-75, 10, 0, 50, 5, "red")
-
-bandeira_coreia_norte()
 
 sleep(2)
 t.clear()
@@ -280,6 +265,23 @@ bandeira_eua()
 
 sleep(2)
 t.clear()
+
+#COREIA DO NORTE
+
+def bandeira_coreia_norte():
+    desenhar_retangulo(-150, 50, 300, 30, "navy")
+    desenhar_retangulo(-150, 40, 300, 10, "white")
+    desenhar_retangulo(-150, -40, 300, 80, "red")
+    desenhar_retangulo(-150, -50, 300, 10, "white")
+    desenhar_retangulo(-150, -80, 300, 30, "navy")
+    desenhar_circulo_paquistao(-50, -30, 30, "white")
+    estrela_generica(-75, 10, 0, 50, 5, "red")
+
+bandeira_coreia_norte()
+
+sleep(2)
+t.clear()
+
 
 #EXTRA
 
@@ -324,4 +326,5 @@ else:
 sleep(2)
 t.clear()
 
-mainloop()       
+mainloop()
+
