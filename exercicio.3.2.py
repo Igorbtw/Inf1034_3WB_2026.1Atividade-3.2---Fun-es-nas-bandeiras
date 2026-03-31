@@ -225,7 +225,6 @@ bandeira_panama()
 sleep(2)
 
 t.clear()
-t.clear()
 
 # SUDAO
 
