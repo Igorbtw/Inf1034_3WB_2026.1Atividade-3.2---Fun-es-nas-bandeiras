@@ -142,20 +142,6 @@ def desenhar_triangulo_iemen(x, y, color):
     t.goto(-150, -100)
     t.end_fill()
 
-def estrela_vermelha_iemen(x, y, larg, alt, color):
-    t.pu()
-    t.goto(x, y)
-    t.pd()
-    t.color(color)
-    t.right(larg)
-    t.begin_fill()
-
-    for _ in range(5):
-        t.fd(alt)
-        t.right(144)
-    
-    t.end_fill()
-
 
 def bandeira_iemen():
     desenhar_retangulo(-150, 33, 300, 67, "red")
