@@ -22,7 +22,7 @@ def desenhar_retangulo(x, y, larg, alt, color):
     t.end_fill()
 
 def desenhar_bandeira_japao():
-    desenha_retangulo(-100, -50, 200, 130, "white")
+    desenhar_retangulo(-100, -50, 200, 130, "white")
 
 
 def desenhar_circulo(x, y, color, raio):
