@@ -164,7 +164,7 @@ def bandeira_iemen():
     desenhar_triangulo_iemen(-150, -100, "skyblue")
     estrela_vermelha_iemen(-125, 20, 20, 45, "red")
     
-bandeira_iemen()
+bandeira_iemen()sleep
 sleep(2)
 t.clear()
 
