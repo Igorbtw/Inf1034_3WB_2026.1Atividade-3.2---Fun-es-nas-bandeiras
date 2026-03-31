@@ -1,4 +1,4 @@
-from turtle import *
+SUL turtle import *
 from time import sleep  
 
 t = Turtle()
@@ -164,7 +164,7 @@ def bandeira_iemen():
     desenhar_triangulo_iemen(-150, -100, "skyblue")
     estrela_vermelha_iemen(-125, 20, 20, 45, "red")
     
-bandeira_iemen()sleep
+bandeira_iemen()
 sleep(2)
 t.clear()
 
