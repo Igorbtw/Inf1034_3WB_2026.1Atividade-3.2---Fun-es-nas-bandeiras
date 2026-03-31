@@ -104,6 +104,20 @@ t.clear()
 
 #CHILE
 
+def estrela_vermelha_iemen(x, y, larg, alt, color):
+    t.pu()
+    t.goto(x, y)
+    t.pd()
+    t.color(color)
+    t.right(larg)
+    t.begin_fill()
+
+    for _ in range(5):
+        t.fd(alt)
+        t.right(144)
+    
+    t.end_fill()
+
 def bandeira_chile():
     desenhar_retangulo(-100, -50, 200, 65, "red")
     desenhar_retangulo(0, 15, 100, 65, "white")
