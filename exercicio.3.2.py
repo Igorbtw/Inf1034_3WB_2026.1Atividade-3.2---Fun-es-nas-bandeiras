@@ -1,4 +1,4 @@
-SUL turtle import *
+from turtle import *
 from time import sleep  
 
 t = Turtle()
