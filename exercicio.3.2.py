@@ -205,7 +205,6 @@ bandeira_paquistao()
 
 sleep(2)
 t.clear()
-sleep(2)
 
 #PANAMA
 
